@@ -1,0 +1,12 @@
+# https://github.com/deepinsight/insightface/issues/256
+
+cd /data/victor/insightface/src/data
+python glint2lst.py /data/victor/trillionpairs/ msra,celebrity > ../../datasets/glint/glint.lst
+
+cd /data/victor/insightface/datasets/glint
+echo $[180854+1],112,112 > property
+
+python ../../src/data/face2rec2.py . --num-thread 8
+
+mv glint.rec train.rec
+mv glint.idx train.idx

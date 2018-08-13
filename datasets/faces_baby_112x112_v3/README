@@ -1,0 +1,2 @@
+train set = CVTE(207) + ShiJiXing(92) + CVTE(real-world scene)
+test set = CVTE(100)
